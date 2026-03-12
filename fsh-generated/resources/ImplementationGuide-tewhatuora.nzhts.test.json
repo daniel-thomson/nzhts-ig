@@ -1,0 +1,419 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "tewhatuora.nzhts.test",
+  "url": "https://fhir-ig.digital.health.nz/nzhts-test/ImplementationGuide/tewhatuora.nzhts.test",
+  "version": "0.1.0",
+  "name": "nzhtstest",
+  "title": "New Zealand Health Terminology Service (NZHTS) Implementation Guide",
+  "status": "draft",
+  "publisher": "Health New Zealand | Te Whatu Ora",
+  "contact": [
+    {
+      "name": "Health New Zealand | Te Whatu Ora",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.tewhatuora.govt.nz/"
+        }
+      ]
+    }
+  ],
+  "description": "FHIR Iimplementation Guide for the NZHTS generated from the NZHTS API",
+  "packageId": "tewhatuora.nzhts.test",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "CodeSystem/acc-patient-occupation-code"
+        },
+        "description": "Codes for classifying patient occupations, drawn from the ACC codeset",
+        "exampleBoolean": false,
+        "name": "ACC Patient Occupation CodeSystem"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/practitioner-additional-authorisation"
+        },
+        "description": "Additional authorisations that a practitioner is authorised to practice or prescribe.",
+        "exampleBoolean": false,
+        "name": "Additional Authorisation"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/practitioner-additional-authorisation-code"
+        },
+        "description": "A coded type for additional authorisations",
+        "exampleBoolean": false,
+        "name": "Additional Practitioner authorisations"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/location-alias-type"
+        },
+        "description": "The complete set of alias types that apply to Locations and Organizations",
+        "exampleBoolean": false,
+        "name": "Alias types"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/contact-point-purpose"
+        },
+        "description": "The purpose of a ContactPoint - what it is used for.",
+        "exampleBoolean": false,
+        "name": "ContactPoint purpose"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/contact-point-purpose"
+        },
+        "description": "The purpose of a ContactPoint - what it is used for.",
+        "exampleBoolean": false,
+        "name": "ContactPoint purpose"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/coverage-category"
+        },
+        "description": "New Zealand codes for Coverage category types",
+        "exampleBoolean": false,
+        "name": "Coverage category"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/coverage-category"
+        },
+        "description": "New Zealand codes for Coverage category types",
+        "exampleBoolean": false,
+        "name": "Coverage Category"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/coverage-type"
+        },
+        "description": "New Zealand codes for Coverage Types",
+        "exampleBoolean": false,
+        "name": "Coverage type"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/coverage-type-code"
+        },
+        "description": "New Zealand codes for Coverage Types",
+        "exampleBoolean": false,
+        "name": "Coverage Type"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/datumCode"
+        },
+        "description": "Datum codes used",
+        "exampleBoolean": false,
+        "name": "Datum code"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/datum-code"
+        },
+        "description": "Possible datum codes",
+        "exampleBoolean": false,
+        "name": "Datum codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/dod-information-source-code"
+        },
+        "description": "The source from where the date of death was sourced.",
+        "exampleBoolean": false,
+        "name": "Death date Information Source"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/dhb"
+        },
+        "description": "District Health Board Identifer. Assigned by the HPI.",
+        "exampleBoolean": false,
+        "name": "District Health Board Identifer"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/36d65fe3-ec80-48ad-af71-604abd675687"
+        },
+        "description": "Te Whatu Ora list of domicile codes",
+        "exampleBoolean": false,
+        "name": "Domicile Code"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/domicile-code"
+        },
+        "description": "Domicile Code",
+        "exampleBoolean": false,
+        "name": "Domicile Code"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/Ethnicityfull"
+        },
+        "description": "NZ ethnic group codes that cover every ethnicity level",
+        "exampleBoolean": false,
+        "name": "Ethnicity of a person (full)"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ethnicity"
+        },
+        "description": "Codes to record a person's ethnicity, drawn from [Level 4 of the Ethnicity code system](http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/YVqOcFHSlguKkT17)\nNote that the correct version of the ethicity code system is 2.1.0",
+        "exampleBoolean": false,
+        "name": "Ethnicity of a person (L4)"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/funded-programme"
+        },
+        "description": "Some sort of funded programme",
+        "exampleBoolean": false,
+        "name": "Funded Programme"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/funded-programme"
+        },
+        "description": "Some sort of funded programme",
+        "exampleBoolean": false,
+        "name": "Funded Programme"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/information-source"
+        },
+        "description": "All possible sources of information",
+        "exampleBoolean": false,
+        "name": "Information Source"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/information-source"
+        },
+        "description": "The source from where the value of this item was sourced",
+        "exampleBoolean": false,
+        "name": "Information Source"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/iwi"
+        },
+        "description": "New Zealand iwi codes",
+        "exampleBoolean": false,
+        "name": "Iwi"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ethnicityL4"
+        },
+        "description": "Codes to record a person’s ethnicity, drawn from Level 4 of the Ethnicity code system \ndescribed [here](http://aria.stats.govt.nz/aria/#ClassificationView:uri=http://stats.govt.nz/cms/ClassificationVersion/YVqOcFHSlguKkT17)",
+        "exampleBoolean": false,
+        "name": "Level 4 ethnicity codes"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/MaoriDescentValueset"
+        },
+        "exampleBoolean": false,
+        "name": "Māori descent codes"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/maoridescentcode"
+        },
+        "description": "Stats NZ's Māori descent codes",
+        "exampleBoolean": false,
+        "name": "Māori descent codes"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/citizenship-status"
+        },
+        "description": "Is this person a NZ Citizen",
+        "exampleBoolean": false,
+        "name": "NZ Citizenship status"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/nz-citizenship-status-code"
+        },
+        "description": "Citizenship status",
+        "exampleBoolean": false,
+        "name": "NZ Citizenship status"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/dhb-code"
+        },
+        "description": "NZ District Health Board (HPI-ORG) Codes",
+        "exampleBoolean": false,
+        "name": "NZ DHB"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/iwi-code"
+        },
+        "description": "A FHIR CodeSystem of Iwi and iwi-related groups statistical classification",
+        "exampleBoolean": false,
+        "name": "NZ Iwi"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/nz-residency"
+        },
+        "description": "NZ Residency status",
+        "exampleBoolean": false,
+        "name": "NZ Residency status"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/nz-residency-code"
+        },
+        "description": "Is the person a NZ resident",
+        "exampleBoolean": false,
+        "name": "NZ Residency status"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/pho"
+        },
+        "description": "Primary Healthcare Organization",
+        "exampleBoolean": false,
+        "name": "PHO"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/pho-status"
+        },
+        "description": "Primary Healthcare Organization",
+        "exampleBoolean": false,
+        "name": "PHO"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/hpi-practitionerRole-status-reason"
+        },
+        "description": "The reason for the current status of PractitionerRole",
+        "exampleBoolean": false,
+        "name": "PractitionerRole status reason"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/hpi-practitionerrole-status-reason"
+        },
+        "description": "The reason for the current status of PractitionerRole",
+        "exampleBoolean": false,
+        "name": "PractitionerRole status reason"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/practitioner-registration-status-code"
+        },
+        "description": "The code list represents the current practicing status of the Provider Person as per their registration with an RA.",
+        "exampleBoolean": false,
+        "name": "Registration Status of Practitioners"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/practitioner-registration-status-code"
+        },
+        "description": "The code list represents the current practicing status of the Provider Person as per their registration with an RA.",
+        "exampleBoolean": false,
+        "name": "Registration Status of Practitioners"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/practitioner-scope-of-practice"
+        },
+        "description": "A coded type for professional scope of practice.",
+        "exampleBoolean": false,
+        "name": "Scope of practice"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/alias-type"
+        },
+        "description": "Used in Organization and Location to indicate what is the type of Alias",
+        "exampleBoolean": false,
+        "name": "Type of Alias"
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/nhi-use"
+        },
+        "description": "NHI Use codes",
+        "exampleBoolean": false,
+        "name": "Valid use values for NHI"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2024+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "no-narrative",
+        "value": "CodeSystem/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "ValueSet/*"
+      },
+      {
+        "code": "no-narrative",
+        "value": "ConceptMap/*"
+      },
+      {
+        "code": "no-validate",
+        "value": "CodeSystem/*"
+      },
+      {
+        "code": "no-validate",
+        "value": "ValueSet/*"
+      },
+      {
+        "code": "no-validate",
+        "value": "ConceptMap/*"
+      },
+      {
+        "code": "no-check-usage",
+        "value": "CodeSystem/*"
+      },
+      {
+        "code": "no-check-usage",
+        "value": "ValueSet/*"
+      },
+      {
+        "code": "no-check-usage",
+        "value": "ConceptMap/*"
+      },
+      {
+        "code": "apply-version",
+        "value": "false"
+      }
+    ]
+  }
+}

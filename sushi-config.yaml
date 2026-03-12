@@ -3,9 +3,9 @@
 # │  used properties are included. For a list of all supported properties and their functions,     │
 # │  see: https://fshschool.org/docs/sushi/configuration/.                                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: tewhatuora.nzhts
-canonical: https://fhir-ig.digital.health.nz/nzhts
-name: nzhts
+id: tewhatuora.nzhts.test
+canonical: https://fhir-ig.digital.health.nz/nzhts-test
+name: nzhts-test
 title: New Zealand Health Terminology Service (NZHTS) Implementation Guide
 description: FHIR Iimplementation Guide for the NZHTS generated from the NZHTS API
 status: draft # draft | active | retired | unknown
